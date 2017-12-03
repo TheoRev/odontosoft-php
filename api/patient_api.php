@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin: *');
 
 	require "../dao/PatientDao.php";
 
@@ -9,7 +10,7 @@
 		}
 	}
 
-	$opc = $_GET["opt"];
+	$opc = isset($_GET["opt"])? $_GET["opt"] : "";
 
 	$api = new PatientAPI();
 
