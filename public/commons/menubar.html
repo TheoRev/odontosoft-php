@@ -1,18 +1,36 @@
 <div id="mm">
   <ul>
     <li>
-      <a data-icon="fa-file-o"
+      <a id="lnkPatient" data-icon="fa-wheelchair"
          href="#">PACIENTE</a>
     </li>
     <li>
-      <a href="#">TRATAMIENTO</a>
+      <a id="lnkTreatment" data-icon="fa-book"
+         href="#">TRATAMIENTO</a>
     </li>
     <li>
-      <a href="#">CONTROL</a>
+      <a data-icon="fa-address-book-o"
+         href="#">CONTROL</a>
     </li>
     <li>
-      <a href="#">ODONTOGRAMA</a>
+      <a data-icon="fa-picture-o"
+         href="#">ODONTOGRAMA</a>
     </li>
-  </ul>
+  </u>
 </div>
-<script>$("#mm").puimegamenu();</script>
+<script>
+  $("#mm").puimegamenu();
+
+  $('#mm li a').on('click', function(){
+    $('li a.activo').removeClass('activo');
+    $(this).addClass('activo');
+  });
+
+  $("#lnkTreatment").click(function(){
+		$("#content").load("../../views/patient/treatment.html");
+  });
+  
+  $("#lnkPatient").click(function(){
+		$("#content").load("../../views/patient/patient.html");
+	});
+</script>

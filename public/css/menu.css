@@ -1,12 +1,4 @@
-#mm{
-	height: 30pt;
-	padding-top: 0;
-	margin-bottom: 0;
+.activo {
+	text-decoration: underline;
+	background-color: red;
 }
-
-ul, li{
-	padding-top: 0;
-	margin-top: 5pt;
-	/* margin-bottom: 0; */
-}
-
