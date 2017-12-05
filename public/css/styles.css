@@ -1,3 +1,20 @@
-.data-table{
-	padding-top: 15px;
+.data-table {
+    padding-top: 15px;
+}
+
+.cell-content {
+    text-align: center;
+}
+
+.header-table-small,
+.header-enf {
+    width: 50pt;
+}
+
+.header-date {
+    width: 80pt;
+}
+
+.header-action {
+    width: 100pt;
 }
