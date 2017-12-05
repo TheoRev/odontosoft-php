@@ -15,7 +15,15 @@ $(document).ready(function() {
       responsive: false,
       columns: [
         { field: "id", headerText: "ID" },
-        { field: "date_init", headerText: "Fec. Ingr.", pattern: 'dd/MM/yyyy' },
+        {
+          field: "date_init",
+          headerText: "Fec. Ingr.",
+          pattern: "dd/MM/yyyy",
+          content: function(p) {
+            return setFormatDate(p);
+            // return $(p.date_init);
+          }
+        },
         { field: "nom_ape", headerText: "Nombres y Ape.", filter: true },
         { field: "age", headerText: "Edad" },
         { field: "sex", headerText: "Sexo" },
@@ -36,7 +44,6 @@ $(document).ready(function() {
             let patients;
             for (let i = 0; i < response.length; i++) {
               // console.log(response[i]);
-
             }
             callback.call(this, response);
           }
@@ -45,3 +52,13 @@ $(document).ready(function() {
     });
   });
 });
+
+function setFormatDate(p) {
+  let d = p.date_init.toString();
+  d = d
+    .split("-")
+    .reverse()
+    .join("/");
+  console.log(d);
+  return d;
+}
