@@ -1,5 +1,5 @@
 .data-table {
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .cell-content {
@@ -17,4 +17,16 @@
 
 .header-action {
     width: 100pt;
+}
+
+.panel{
+    text-align: right;
+}
+
+.clumn-hight{
+    width: 250pt;
+}
+
+.inputs{
+    width: 100%;
 }

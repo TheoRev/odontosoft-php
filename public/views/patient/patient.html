@@ -1,9 +1,88 @@
 <!-- <h2>Pacientes</h2> -->
+<div class="panel" id="pnlControlPatient">
+	<button id="btnModify" type="button">MODIFICAR</button>
+	<button id="btnAdd" type="button">AGREGAR</button>
+</div>
 <div class="data-table" id="tblPatients"></div>
+<div id="frmPatient" class="ui-grid ui-grid-responsive" title="PACIENTE">
+	<div class="ui-grid-row">
+		<div class="ui-grid-col-6">
+			<br/>
+			<div class="labels-patient">
+				<span class="ui-float-label">ID</span>
+			</div>
+			<input id="txtId" maxlength="10" required>
+			<br/>
+			<br/>
+			<div>
+				<span class="ui-float-label">Fecha</span>
+			</div>
+			<p-datepicker showOn="button"></p-datepicker>
+			<br/>
+			<br/>
+			<div>
+				<span class="ui-float-label">Nombre y Ape.</span>
+			</div>
+			<input class="inuts" id="txtNomApe" required>
+			<br/>
+			<br/>
+			<div>
+				<span class="ui-float-label">Edad</span>
+			</div>
+			<input id="txtAge" type="text" required>
+			<br/>
+			<br/>
+			<div>
+				<span>Sexo:</span>
+				<div class="ui-grid ui-grid-responsive">
+					<div class="ui-grid-row">
+						<div class="ui-grid-col-1">
+							<input type="radio" name="rd1" id="rd1_1" value="M" />
+						</div>
+						<div class="ui-grid-col-1">
+							<label for="rd1_1" class="ui-widget">Masculino</label>
+						</div>
+					</div>
+					<div class="ui-grid-row">
+						<div class="ui-grid-col-1">
+							<input type="radio" name="rd1" id="rd1_2" value="F" />
+						</div>
+						<div class="ui-grid-col-1">
+							<label for="rd1_2" class="ui-widget">Femenino</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div>
+				<span class="ui-float-label">Fec. Nacimiento</span>
+			</div>
+			<p-datepicker showOn="button"></p-datepicker>
+			<br/>
+			<br/>
+			<div>
+				<span class="ui-float-label">Dirección</span>
+			</div>
+			<input id="txtAddress" required>
+			<br/>
+			<br/>
+			<div>
+				<span class="ui-float-label">Ocupación</span>
+			</div>
+			<input id="txtOcupation" required>
+		</div>
+		<div class="ui-grid-col-6">
+			<br/>
+			<div>
+				<span class="ui-float-label">Telef. / Cel.</span>
+			</div>
+			<input id="txtTelefCel" required>
+		</div>
+	</div>
+</div>
 <script src="../../js/controller/patient/patientController.js"></script>
-
 <script>
-    $('#btnUpdate').puibutton({
-        icon: 'fa-pencil'
-    });
+	// $(document).ready(function(){
+	// 	console.log($("#frmPatient").attr("title"));
+	// });
 </script>

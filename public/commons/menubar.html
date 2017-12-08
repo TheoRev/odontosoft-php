@@ -21,6 +21,9 @@
 <script>
   $("#mm").puimegamenu();
 
+  $('li a.activo').removeClass('activo');
+	$('li a#lnkPatient').addClass('activo');
+
   $('#mm li a').on('click', function(){
     $('li a.activo').removeClass('activo');
     $(this).addClass('activo');
